@@ -18,6 +18,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         display: ['Oswald', 'sans-serif'],
+        logo: ['"Harlow Solid Italic"', '"Harlow Solid"', 'cursive'],
       },
       animation: {
         'float': 'float 3s ease-in-out infinite',

@@ -29,8 +29,8 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex flex-col items-start z-50">
           <div className="flex items-end">
-            <span className="font-display font-bold text-3xl tracking-wide text-white">uni</span>
-            <span className="font-display font-bold text-4xl text-brand-teal ml-1">क</span>
+            <span className="font-logo text-3xl tracking-wide text-white">uni</span>
+            <span className="font-logo text-4xl text-brand-teal ml-1">क</span>
           </div>
           <span className="font-sans text-xs tracking-widest text-brand-accent uppercase mt-[-4px]">Drippy Apparels</span>
         </Link>
@@ -46,7 +46,7 @@ const Navbar = () => {
 
         {/* Desktop Icons */}
         <div className="hidden md:flex items-center space-x-4">
-          <a href="https://instagram.com/unique.drippyapparels" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-brand-accent transition-colors">
+          <a href="https://instagram.com/unique_drippyapparels" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-brand-accent transition-colors">
             <Instagram size={20} />
           </a>
           <a href="https://wa.me/919422689726" target="_blank" rel="noreferrer" className="bg-brand-teal hover:bg-brand-blue text-white px-4 py-2 rounded-full text-sm font-medium transition-colors flex items-center space-x-2">
@@ -83,7 +83,7 @@ const Navbar = () => {
               </a>
             ))}
             <div className="flex space-x-6 mt-8">
-              <a href="https://instagram.com/unique.drippyapparels" className="text-white hover:text-brand-accent">
+              <a href="https://instagram.com/unique_drippyapparels" className="text-white hover:text-brand-accent">
                 <Instagram size={32} />
               </a>
             </div>

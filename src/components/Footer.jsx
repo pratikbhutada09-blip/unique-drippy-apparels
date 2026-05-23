@@ -10,8 +10,8 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex flex-col items-start">
               <div className="flex items-end">
-                <span className="font-display font-bold text-3xl tracking-wide text-white">uni</span>
-                <span className="font-display font-bold text-4xl text-brand-teal ml-1">क</span>
+                <span className="font-logo text-3xl tracking-wide text-white">uni</span>
+                <span className="font-logo text-4xl text-brand-teal ml-1">क</span>
               </div>
               <span className="font-sans text-xs tracking-widest text-brand-accent uppercase mt-[-4px]">Drippy Apparels</span>
             </div>
@@ -54,7 +54,7 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg font-display tracking-wide">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="https://instagram.com/unique.drippyapparels" target="_blank" rel="noreferrer" className="bg-white/5 p-3 rounded-full hover:bg-brand-accent hover:text-black transition-all">
+              <a href="https://instagram.com/unique_drippyapparels" target="_blank" rel="noreferrer" className="bg-white/5 p-3 rounded-full hover:bg-brand-accent hover:text-black transition-all">
                 <Instagram size={20} />
               </a>
             </div>

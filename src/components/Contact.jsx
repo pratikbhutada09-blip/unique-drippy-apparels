@@ -51,8 +51,8 @@ const Contact = () => {
               <div>
                 <h4 className="text-xl font-bold text-white mb-2">Instagram</h4>
                 <p className="text-gray-400 mb-4">DM us for designs and collaborations.</p>
-                <a href="https://instagram.com/unique.drippyapparels" target="_blank" rel="noreferrer" className="text-white hover:text-brand-accent transition-colors font-semibold">
-                  @unique.drippyapparels
+                <a href="https://instagram.com/unique_drippyapparels" target="_blank" rel="noreferrer" className="text-white hover:text-brand-accent transition-colors font-semibold">
+                  @unique_drippyapparels
                 </a>
               </div>
             </div>
