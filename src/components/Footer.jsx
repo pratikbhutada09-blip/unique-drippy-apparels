@@ -46,7 +46,9 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-3 mt-2">
                 <MapPin size={16} className="text-brand-teal flex-shrink-0 mt-1" />
-                <span>Available for online orders and bulk corporate deliveries.</span>
+                <span className="leading-relaxed">
+                  Shop No. 2, Millennium Apartment, 11/1 Karve Road, Opposite R.L. Jewellers, Nal Stop, Pune, Maharashtra 411004
+                </span>
               </li>
             </ul>
           </div>

@@ -63,13 +63,28 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass-card p-2 h-full min-h-[400px] relative overflow-hidden"
+            className="glass-card p-2 h-full min-h-[400px] relative overflow-hidden flex flex-col justify-between"
           >
-            {/* Google Maps Placeholder */}
-            <div className="absolute inset-0 bg-brand-dark/50 flex flex-col items-center justify-center p-8 text-center border-2 border-dashed border-gray-600 m-2">
-              <MapPin size={48} className="text-brand-teal mb-4" />
-              <h4 className="text-2xl font-bold text-white mb-2">Location Map</h4>
-              <p className="text-gray-400">Embed your Google Maps iframe here to show your store or workshop location.</p>
+            {/* Google Maps Embed with Dark Theme style filter */}
+            <div className="w-full h-[320px] rounded-lg overflow-hidden relative">
+              <iframe
+                title="Store Location"
+                src="https://maps.google.com/maps?q=Shop%20No.%202,%20Millennium%20Apartment,%2011/1%20Karve%20Road,%20Opposite%20R.L.%20Jewellers,%20Nal%20Stop,%20Pune,%20Maharashtra%20411004&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) grayscale(10%) contrast(90%)' }}
+                allowFullScreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div className="p-4 flex items-start space-x-3">
+              <MapPin size={24} className="text-brand-teal flex-shrink-0 mt-1" />
+              <div>
+                <h4 className="text-white font-bold">Our Store</h4>
+                <p className="text-gray-400 text-sm mt-1">
+                  Shop No. 2, Millennium Apartment, 11/1 Karve Road, Opposite R.L. Jewellers, Nal Stop, Pune, Maharashtra 411004
+                </p>
+              </div>
             </div>
           </motion.div>
 
