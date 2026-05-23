@@ -27,12 +27,14 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         
         {/* Logo */}
-        <Link to="/" className="flex flex-col items-start z-50">
-          <div className="flex items-end">
-            <span className="font-logo text-3xl tracking-wide text-white">uni</span>
-            <span className="font-logo text-4xl text-brand-teal ml-1">क</span>
+        {/* Logo */}
+        <Link to="/" className="inline-flex flex-col items-center z-50">
+          <div className="flex items-end leading-none">
+            <span className="font-logo text-3xl text-white">uni</span>
+            <span className="font-sans font-bold text-4xl text-brand-accent ml-1">क</span>
           </div>
-          <span className="font-sans text-xs tracking-widest text-brand-accent uppercase mt-[-4px]">Drippy Apparels</span>
+          <div className="w-full h-[1px] bg-white/20 my-1"></div>
+          <span className="font-logo text-sm text-white tracking-wide leading-none">Drippy Apparels</span>
         </Link>
 
         {/* Desktop Links */}
