@@ -66,7 +66,7 @@ const CTA = () => {
           <div className="flex flex-col md:flex-row justify-center gap-5 mt-12">
 
             <a
-              href="https://wa.me/91XXXXXXXXXX"
+              href="https://wa.me/919422689726"
               target="_blank"
               rel="noreferrer"
               className="primary-btn flex items-center justify-center gap-3"
@@ -76,7 +76,7 @@ const CTA = () => {
             </a>
 
             <a
-              href="tel:+91XXXXXXXXXX"
+              href="tel:+919422689726"
               className="secondary-btn flex items-center justify-center gap-3"
             >
               <FiPhoneCall size={20} />
