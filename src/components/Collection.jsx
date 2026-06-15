@@ -35,7 +35,7 @@ const categories = [
 
 const Collection = () => {
   return (
-    <section id="collections" className="py-24 bg-brand-dark">
+    <section id="collections" className="py-24 bg-brand-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="mb-16 text-center md:text-left">
