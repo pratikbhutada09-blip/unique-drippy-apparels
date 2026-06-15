@@ -44,7 +44,7 @@ const Hero = () => {
           <a href="#collections" className="w-full sm:w-auto px-8 py-4 bg-brand-teal text-black rounded-none font-bold tracking-widest uppercase hover:bg-brand-blue transition-all duration-300 hover:shadow-[0_0_20px_rgba(13,148,136,0.5)]">
             Explore Collection
           </a>
-          <a href="#customize" className="w-full sm:w-auto px-8 py-4 bg-transparent border border-black/30 text-black rounded-none font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300">
+          <a href="#customize" className="w-full sm:w-auto px-8 py-4 bg-transparent border border-black/30 text-black rounded-none font-bold tracking-widest uppercase hover:bg-black hover:text-black transition-all duration-300">
             Customize Now
           </a>
         </motion.div>
