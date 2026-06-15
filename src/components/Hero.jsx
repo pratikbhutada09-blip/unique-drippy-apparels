@@ -4,10 +4,11 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0B0B0B]"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-dark"
     >
       {/* Background Image */}
       <div className="absolute inset-0">
+
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35"
           style={{
@@ -17,98 +18,124 @@ const Hero = () => {
         />
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-[#0B0B0B]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/60 to-brand-dark"></div>
 
-        {/* Premium Glow Effects */}
-        <div className="absolute top-20 left-20 w-96 h-96 rounded-full bg-cyan-500/20 blur-[140px]" />
-        <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-teal-500/20 blur-[140px]" />
+        {/* Glow Effects */}
+        <div className="absolute -top-20 left-10 w-96 h-96 rounded-full bg-brand-accent/20 blur-[140px] animate-pulse"></div>
+
+        <div className="absolute bottom-0 right-10 w-96 h-96 rounded-full bg-brand-teal/20 blur-[140px] animate-pulse"></div>
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
 
-        {/* New Drop Badge */}
+      <div className="relative z-10 container-custom text-center">
+
+        {/* Badge */}
+
         <motion.div
-          initial={{ opacity: 0, y: -15 }}
+          initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-block mb-6"
+          className="mb-8"
         >
-          <span className="px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-400 text-cyan-300 text-xs tracking-[0.3em] uppercase font-semibold backdrop-blur-md">
+          <span className="glass px-5 py-2 rounded-full text-brand-accent uppercase tracking-[0.3em] text-xs font-semibold">
             New Drop 2026
           </span>
         </motion.div>
 
         {/* Heading */}
+
         <motion.h1
-          initial={{ opacity: 0, y: 35 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-display font-bold leading-tight tracking-tight text-white"
+          className="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-tight"
         >
-          DEFY THE
+          WE DON'T
           <br />
-          <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-teal-400 bg-clip-text text-transparent">
-            ORDINARY
+
+          <span className="text-gradient">
+            FOLLOW TRENDS
           </span>
+
+          <br />
+
+          WE CREATE THEM
         </motion.h1>
 
         {/* Subtitle */}
+
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-          className="mt-8 max-w-3xl mx-auto text-lg md:text-xl text-gray-300 leading-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="mt-8 max-w-3xl mx-auto text-lg md:text-xl text-brand-gray"
         >
-          Premium oversized streetwear, tie & dye collections,
-          customized printing and corporate apparel crafted for
-          creators, trendsetters and modern culture.
+          Premium oversized streetwear, tie & dye,
+          customized printing and corporate apparel
+          crafted for creators, trendsetters and
+          modern culture.
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/* Buttons */}
+
         <motion.div
-          initial={{ opacity: 0, scale: 0.92 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.4 }}
-          className="mt-12 flex flex-col sm:flex-row justify-center gap-5"
+          transition={{ delay: 0.5 }}
+          className="mt-12 flex flex-col sm:flex-row gap-5 justify-center"
         >
           <a
             href="#collections"
-            className="px-8 py-4 rounded-lg bg-cyan-500 text-black font-bold uppercase tracking-wider hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-lg"
+            className="primary-btn glow-blue"
           >
             Explore Collection
           </a>
 
           <a
             href="#customize"
-            className="px-8 py-4 rounded-lg border-2 border-white text-white font-bold uppercase tracking-wider hover:bg-white hover:text-black transition-all duration-300"
+            className="secondary-btn"
           >
-            Customize Now
+            Customize Your Design
           </a>
         </motion.div>
 
         {/* Trust Indicators */}
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
-          className="mt-14 flex flex-wrap justify-center gap-8 text-gray-400 text-sm uppercase tracking-widest"
+          transition={{ delay: 0.8 }}
+          className="mt-14 flex flex-wrap justify-center gap-6 text-sm uppercase tracking-[0.25em] text-gray-400"
         >
-          <span>Premium Quality</span>
+          <span>Premium Fabric</span>
+
           <span>•</span>
+
           <span>Custom Printing</span>
+
           <span>•</span>
+
+          <span>Bulk Orders</span>
+
+          <span>•</span>
+
           <span>Pan India Delivery</span>
         </motion.div>
+
       </div>
 
       {/* Scroll Indicator */}
+
       <motion.div
         animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Infinity, duration: 1.5 }}
+        transition={{
+          repeat: Infinity,
+          duration: 1.5,
+        }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-400"
       >
-        <div className="text-xs uppercase tracking-[0.35em] mb-2 text-center">
+        <div className="text-xs uppercase tracking-[0.35em] text-center mb-2">
           Scroll
         </div>
 
@@ -126,6 +153,7 @@ const Hero = () => {
           />
         </svg>
       </motion.div>
+
     </section>
   );
 };
