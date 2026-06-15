@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-light">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 z-0">
         {/* Placeholder for streetwear background image */}
