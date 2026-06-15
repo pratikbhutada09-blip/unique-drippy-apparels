@@ -1,96 +1,161 @@
-import { motion } from 'framer-motion';
-import { PenTool, Box, ShieldCheck, Zap } from 'lucide-react';
+import { motion } from "framer-motion";
+import {
+  FiUpload,
+  FiEdit3,
+  FiTruck,
+  FiMessageCircle,
+} from "react-icons/fi";
 
-const features = [
+const steps = [
   {
-    icon: <PenTool size={32} />,
-    title: 'Custom Printing',
-    desc: 'Bring your own designs to life with our premium printing technology.'
+    icon: <FiUpload size={36} />,
+    title: "Upload Your Design",
+    desc: "Share your logo, artwork or idea with us.",
   },
   {
-    icon: <Box size={32} />,
-    title: 'Bulk & Corporate',
-    desc: 'Specialized in large-scale corporate clothing and bulk orders for events.'
+    icon: <FiEdit3 size={36} />,
+    title: "We Create Mockup",
+    desc: "Our designers prepare a premium preview for approval.",
   },
   {
-    icon: <ShieldCheck size={32} />,
-    title: 'Premium Quality',
-    desc: 'We use high-grade fabrics ensuring durability and maximum comfort.'
+    icon: <FiTruck size={36} />,
+    title: "Production & Delivery",
+    desc: "High-quality printing with Pan India delivery.",
   },
-  {
-    icon: <Zap size={32} />,
-    title: 'Fast Turnaround',
-    desc: 'Quick production and delivery times across India.'
-  }
 ];
 
 const Customize = () => {
   return (
-    <section id="customize" className="py-24 bg-black relative overflow-hidden">
-      {/* Decorative gradient */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-blue/10 to-transparent"></div>
+    <section
+      id="customize"
+      className="py-24 bg-brand-dark"
+    >
+      <div className="container-custom">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
-          <div>
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-display font-bold uppercase tracking-tight text-white mb-6">
-                Your Vision, <br />
-                <span className="text-brand-teal">Our Canvas</span>
-              </h2>
-              <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                Whether you need a single custom-printed t-shirt to express your vibe, or uniform corporate clothing for your entire company, we've got you covered. We specialize in bringing unique ideas to life.
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
-                {features.map((feat, idx) => (
-                  <div key={idx} className="flex items-start space-x-4">
-                    <div className="text-brand-accent mt-1 bg-brand-accent/10 p-3 rounded-lg">
-                      {feat.icon}
-                    </div>
-                    <div>
-                      <h4 className="text-white font-semibold mb-1">{feat.title}</h4>
-                      <p className="text-sm text-gray-500">{feat.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+        <div className="text-center mb-16">
 
-              <a 
-                href="https://wa.me/919422689726?text=Hi! I want to inquire about customized/corporate orders." 
-                target="_blank" 
-                rel="noreferrer"
-                className="inline-block px-8 py-4 bg-white text-black font-bold uppercase tracking-widest hover:bg-brand-teal hover:text-white transition-all duration-300"
-              >
-                Inquire on WhatsApp
-              </a>
-            </motion.div>
-          </div>
+          <span className="text-brand-accent uppercase tracking-[0.35em] text-sm">
+            Custom Orders
+          </span>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative h-[600px] w-full hidden lg:block"
-          >
-            <div className="absolute inset-0 border-2 border-brand-teal/30 translate-x-4 translate-y-4"></div>
-            <img 
-              src="https://images.unsplash.com/photo-1588629088688-66236b2809f4?q=80&w=1964&auto=format&fit=crop" 
-              alt="Custom Printing" 
-              className="absolute inset-0 w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700"
-            />
-          </motion.div>
+          <h2 className="section-title mt-4">
+            Design Your
+            <span className="text-gradient"> Own Apparel</span>
+          </h2>
+
+          <p className="section-subtitle mt-6">
+            From single customized t-shirts to bulk corporate
+            uniforms, college events and promotional merchandise,
+            we manufacture exactly what you imagine.
+          </p>
 
         </div>
+
+        {/* Steps */}
+
+        <div className="grid md:grid-cols-3 gap-8">
+
+          {steps.map((step, index) => (
+
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.15,
+              }}
+              className="card p-8 text-center hover-lift"
+            >
+
+              <div className="flex justify-center mb-6 text-brand-accent">
+                {step.icon}
+              </div>
+
+              <h3 className="text-2xl font-display text-white mb-4">
+                {step.title}
+              </h3>
+
+              <p className="text-brand-gray">
+                {step.desc}
+              </p>
+
+            </motion.div>
+
+          ))}
+
+        </div>
+
+        {/* CTA Card */}
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="mt-20 rounded-3xl overflow-hidden glass p-10"
+        >
+
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+
+            <div>
+
+              <h3 className="text-4xl font-display text-white mb-5">
+                Need Bulk or
+                <span className="text-gradient">
+                  {" "}Corporate Orders?
+                </span>
+              </h3>
+
+              <p className="text-brand-gray leading-8">
+                We specialize in:
+              </p>
+
+              <ul className="mt-6 space-y-3 text-gray-300">
+
+                <li>✔ Corporate Uniforms</li>
+
+                <li>✔ Event T-Shirts</li>
+
+                <li>✔ College Merchandise</li>
+
+                <li>✔ Startup Branding</li>
+
+                <li>✔ Sports Jerseys</li>
+
+                <li>✔ Promotional Apparel</li>
+
+              </ul>
+
+            </div>
+
+            <div className="flex flex-col gap-5">
+
+              <a
+                href="https://wa.me/YOURNUMBER"
+                target="_blank"
+                rel="noreferrer"
+                className="primary-btn flex items-center justify-center gap-3"
+              >
+                <FiMessageCircle />
+                WhatsApp Now
+              </a>
+
+              <a
+                href="#contact"
+                className="secondary-btn text-center"
+              >
+                Get Free Quote
+              </a>
+
+            </div>
+
+          </div>
+
+        </motion.div>
+
       </div>
-      <div id="corporate"></div>
     </section>
   );
 };
