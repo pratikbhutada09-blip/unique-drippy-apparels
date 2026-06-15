@@ -97,7 +97,7 @@ const Navbar = () => {
             className="md:hidden text-white"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
-            {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+            {mobileOpen ? <FiX size={28} /> : <FiMenu size={28} />}
           </button>
 
         </div>
