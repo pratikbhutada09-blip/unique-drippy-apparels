@@ -1,4 +1,3 @@
-```jsx
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -132,4 +131,3 @@ const Hero = () => {
 };
 
 export default Hero;
-```
