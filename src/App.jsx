@@ -1,23 +1,38 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import FloatingWhatsApp from './components/FloatingWhatsApp';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
+
+import Home from "./pages/Home";
 
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
+
+      <div className="bg-brand-dark text-white min-h-screen overflow-x-hidden">
+
         <Navbar />
-        <main className="flex-grow">
+
+        <main>
+
           <Routes>
-            <Route path="/" element={<Home />} />
-            {/* Add more routes here as pages are created */}
+
+            <Route
+              path="/"
+              element={<Home />}
+            />
+
           </Routes>
+
         </main>
+
         <Footer />
+
         <FloatingWhatsApp />
+
       </div>
+
     </Router>
   );
 }
