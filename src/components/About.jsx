@@ -1,34 +1,208 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import {
+  FiAward,
+  FiStar,
+  FiUsers,
+  FiShield,
+} from "react-icons/fi";
+
+const stats = [
+  {
+    number: "10K+",
+    title: "Happy Customers",
+  },
+  {
+    number: "500+",
+    title: "Custom Designs",
+  },
+  {
+    number: "50+",
+    title: "Corporate Clients",
+  },
+  {
+    number: "25+",
+    title: "Cities Served",
+  },
+];
+
+const features = [
+  {
+    icon: <FiAward size={34} />,
+    title: "Premium Quality",
+    desc: "Carefully selected fabrics with superior comfort and durability.",
+  },
+  {
+    icon: <FiStar size={34} />,
+    title: "Unique Designs",
+    desc: "Fashion-forward collections created for modern youth culture.",
+  },
+  {
+    icon: <FiUsers size={34} />,
+    title: "Bulk Orders",
+    desc: "Corporate, college, event and startup merchandise solutions.",
+  },
+  {
+    icon: <FiShield size={34} />,
+    title: "Trusted Service",
+    desc: "Reliable production, customization and Pan India delivery.",
+  },
+];
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-brand-dark">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="glass-card p-8 md:p-16 text-center max-w-4xl mx-auto relative overflow-hidden"
-        >
-          <div className="absolute -top-24 -left-24 w-48 h-48 bg-brand-teal/20 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-brand-blue/20 rounded-full blur-3xl"></div>
-          
-          <div className="relative z-10">
-            <h2 className="text-3xl md:text-5xl font-display font-bold uppercase tracking-widest text-white mb-8">
-              The <span className="text-brand-accent">Story</span>
-            </h2>
-            <div className="w-16 h-1 bg-brand-teal mx-auto mb-8"></div>
-            
-            <p className="text-lg md:text-2xl text-gray-300 font-light leading-relaxed mb-8">
-              "Uniक Drippy Apparels is a youth-focused custom streetwear and apparel brand specializing in tie & dye, oversized fashion, customized printing, and corporate clothing."
+    <section
+      id="about"
+      className="py-24 bg-brand-secondary"
+    >
+      <div className="container-custom">
+
+        {/* Heading */}
+
+        <div className="text-center mb-16">
+
+          <span className="text-brand-accent uppercase tracking-[0.35em] text-sm">
+            About Us
+          </span>
+
+          <h2 className="section-title mt-4">
+            More Than
+            <span className="text-gradient"> Apparel</span>
+          </h2>
+
+          <p className="section-subtitle mt-6">
+            Unik Drippy Apparels is built for people who express
+            themselves through fashion. We combine creativity,
+            premium fabrics and customization to create clothing
+            that stands out.
+          </p>
+
+        </div>
+
+        {/* Story */}
+
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
+
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2070&auto=format&fit=crop"
+              alt="About"
+              className="rounded-3xl shadow-card"
+            />
+
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+
+            <h3 className="text-4xl font-display text-white mb-6">
+              Fashion with Identity
+            </h3>
+
+            <p className="text-gray-300 leading-8 mb-6">
+              We believe every individual and every organization
+              deserves apparel that reflects its identity. From
+              oversized streetwear and tie & dye collections to
+              customized corporate uniforms and event merchandise,
+              our focus is on quality, creativity and customer
+              satisfaction.
             </p>
-            
-            <p className="text-base text-gray-500 mb-0 max-w-2xl mx-auto">
-              We believe clothing is more than just fabric—it's a statement. Born from the desire to break the mold, we blend premium quality with undeniable drip. Stand out, stay unique.
+
+            <p className="text-gray-300 leading-8">
+              Whether you need one personalized t-shirt or a bulk
+              corporate order, our team delivers premium products
+              with attention to detail and on-time execution.
             </p>
+
+          </motion.div>
+
+        </div>
+
+        {/* Statistics */}
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-20">
+
+          {stats.map((item, index) => (
+
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+              }}
+              className="card p-8 text-center"
+            >
+
+              <h3 className="text-4xl font-display text-brand-accent mb-3">
+                {item.number}
+              </h3>
+
+              <p className="text-gray-300 uppercase tracking-wider">
+                {item.title}
+              </p>
+
+            </motion.div>
+
+          ))}
+
+        </div>
+
+        {/* Why Choose Us */}
+
+        <div className="mt-20">
+
+          <h3 className="text-center text-4xl font-display text-white mb-12">
+            Why Choose Us
+          </h3>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            {features.map((item, index) => (
+
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
+                className="card p-8 text-center hover-lift"
+              >
+
+                <div className="flex justify-center text-brand-accent mb-5">
+                  {item.icon}
+                </div>
+
+                <h4 className="text-2xl font-display text-white mb-4">
+                  {item.title}
+                </h4>
+
+                <p className="text-gray-300">
+                  {item.desc}
+                </p>
+
+              </motion.div>
+
+            ))}
+
           </div>
-        </motion.div>
+
+        </div>
+
       </div>
     </section>
   );
