@@ -2,37 +2,190 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-brand-dark text-white font-sans overflow-x-hidden;
-  }
+/* --------------------------
+   Global Styles
+---------------------------*/
+
+html {
+  scroll-behavior: smooth;
 }
 
-@layer utilities {
-  .glass-nav {
-    @apply bg-brand-dark/80 backdrop-blur-md border-b border-white/10 shadow-lg;
-  }
-  
-  .glass-card {
-    @apply bg-white/5 backdrop-blur-sm border border-white/10 shadow-xl;
-  }
-  
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-teal to-brand-blue;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  background: #0B0B0B;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
 
-/* Custom Scrollbar */
+/* Selection */
+
+::selection {
+  background: #38BDF8;
+  color: #ffffff;
+}
+
+/* Scrollbar */
+
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #111827;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #1e3a8a;
-  border-radius: 4px;
+  background: linear-gradient(
+    180deg,
+    #38BDF8,
+    #14B8A6
+  );
+  border-radius: 20px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #38bdf8;
+  background: #38BDF8;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+}
+
+/* Images */
+
+img {
+  user-select: none;
+}
+
+/* --------------------------
+   Reusable Components
+---------------------------*/
+
+@layer components {
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .glass {
+    backdrop-filter: blur(16px);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .section-title {
+    @apply text-4xl md:text-6xl font-display font-bold uppercase tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-gray-300 text-lg max-w-3xl mx-auto;
+  }
+
+  .primary-btn {
+    @apply px-8 py-4 rounded-lg font-bold uppercase tracking-widest
+    bg-brand-accent text-black
+    transition-all duration-300
+    hover:bg-brand-teal
+    hover:text-white
+    hover:scale-105;
+  }
+
+  .secondary-btn {
+    @apply px-8 py-4 rounded-lg font-bold uppercase tracking-widest
+    border border-white
+    text-white
+    transition-all duration-300
+    hover:bg-white
+    hover:text-black;
+  }
+
+  .card {
+    @apply rounded-2xl overflow-hidden
+    bg-brand-secondary
+    shadow-card
+    transition-all duration-500
+    hover:-translate-y-2;
+  }
+}
+
+/* --------------------------
+   Gradient Text
+---------------------------*/
+
+.text-gradient {
+
+  background: linear-gradient(
+      90deg,
+      #38BDF8,
+      #14B8A6
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
+}
+
+/* --------------------------
+   Animated Glow
+---------------------------*/
+
+.glow-blue {
+
+  box-shadow:
+  0 0 30px rgba(56,189,248,.45),
+  0 0 80px rgba(56,189,248,.15);
+}
+
+.glow-teal {
+
+  box-shadow:
+  0 0 30px rgba(20,184,166,.45),
+  0 0 80px rgba(20,184,166,.15);
+}
+
+/* --------------------------
+   Hover Animation
+---------------------------*/
+
+.hover-lift {
+
+  transition: all .35s ease;
+}
+
+.hover-lift:hover {
+
+  transform: translateY(-8px);
+}
+
+/* --------------------------
+   Fade Animation
+---------------------------*/
+
+.fade-up {
+
+  animation: fadeUp .8s ease;
+}
+
+@keyframes fadeUp {
+
+  from {
+
+    opacity:0;
+    transform:translateY(30px);
+
+  }
+
+  to {
+
+    opacity:1;
+    transform:translateY(0);
+
+  }
+
 }
