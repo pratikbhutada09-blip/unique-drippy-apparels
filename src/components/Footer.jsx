@@ -1,75 +1,225 @@
-import { Instagram, MapPin, Phone, Mail } from 'lucide-react';
+import {
+  FiInstagram,
+  FiFacebook,
+  FiLinkedin,
+  FiMail,
+  FiPhone,
+  FiMapPin,
+  FiArrowRight,
+} from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-300 py-12 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          
+    <footer className="relative bg-black border-t border-white/10">
+
+      {/* Top Section */}
+
+      <div className="container-custom py-20">
+
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-10">
+
           {/* Brand */}
-          <div className="space-y-4">
-            <div className="inline-flex flex-col items-center">
-              <div className="flex items-end leading-none">
-                <span className="font-logo text-3xl text-white">uni</span>
-                <span className="font-sans font-bold text-4xl text-brand-accent ml-1">क</span>
-              </div>
-              <div className="w-full h-[1px] bg-white/20 my-1"></div>
-              <span className="font-logo text-sm text-white tracking-wide leading-none">Drippy Apparels</span>
-            </div>
-            <p className="text-sm text-gray-400">
-              Youth-focused custom streetwear and apparel brand specializing in tie & dye, oversized fashion, and customized printing.
+
+          <div>
+
+            <h2 className="text-3xl font-display font-bold text-white">
+              Uni<span className="text-brand-accent">क</span>{" "}
+              <span className="text-brand-teal">
+                Drippy
+              </span>
+            </h2>
+
+            <p className="text-gray-400 mt-5 leading-7">
+              Premium streetwear, oversized fashion,
+              customized printing, corporate apparel
+              and bulk merchandise solutions.
             </p>
+
+            <div className="flex gap-4 mt-6">
+
+              <a
+                href="https://instagram.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-brand-accent hover:text-black transition"
+              >
+                <FiInstagram />
+              </a>
+
+              <a
+                href="https://facebook.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-brand-accent hover:text-black transition"
+              >
+                <FiFacebook />
+              </a>
+
+              <a
+                href="https://linkedin.com/"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-brand-accent hover:text-black transition"
+              >
+                <FiLinkedin />
+              </a>
+
+            </div>
+
           </div>
 
           {/* Quick Links */}
+
           <div>
-            <h3 className="text-white font-semibold mb-4 text-lg font-display tracking-wide">Quick Navigation</h3>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#collections" className="hover:text-brand-accent transition-colors">Collections</a></li>
-              <li><a href="#customize" className="hover:text-brand-accent transition-colors">Customize</a></li>
-              <li><a href="#corporate" className="hover:text-brand-accent transition-colors">Corporate Orders</a></li>
-              <li><a href="#about" className="hover:text-brand-accent transition-colors">About Us</a></li>
-            </ul>
+
+            <h3 className="text-xl font-semibold text-white mb-5">
+              Quick Links
+            </h3>
+
+            <div className="space-y-3">
+
+              <a href="#home" className="block text-gray-400 hover:text-brand-accent">
+                Home
+              </a>
+
+              <a href="#collections" className="block text-gray-400 hover:text-brand-accent">
+                Collections
+              </a>
+
+              <a href="#customize" className="block text-gray-400 hover:text-brand-accent">
+                Customize
+              </a>
+
+              <a href="#about" className="block text-gray-400 hover:text-brand-accent">
+                About
+              </a>
+
+              <a href="#contact" className="block text-gray-400 hover:text-brand-accent">
+                Contact
+              </a>
+
+            </div>
+
           </div>
 
           {/* Contact */}
+
           <div>
-            <h3 className="text-white font-semibold mb-4 text-lg font-display tracking-wide">Contact Us</h3>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-center space-x-3">
-                <Phone size={16} className="text-brand-teal" />
-                <span>Sharayu: <a href="tel:9422689726" className="hover:text-white">+91 9422689726</a></span>
-              </li>
-              <li className="flex items-center space-x-3">
-                <Phone size={16} className="text-brand-teal" />
-                <span>Pratik: <a href="tel:8888058587" className="hover:text-white">+91 8888058587</a></span>
-              </li>
-              <li className="flex items-start space-x-3 mt-2">
-                <MapPin size={16} className="text-brand-teal flex-shrink-0 mt-1" />
-                <span className="leading-relaxed">
-                  Shop No. 2, Millennium Apartment, 11/1 Karve Road, Opposite R.L. Jewellers, Nal Stop, Pune, Maharashtra 411004
-                </span>
-              </li>
-            </ul>
+
+            <h3 className="text-xl font-semibold text-white mb-5">
+              Contact
+            </h3>
+
+            <div className="space-y-5">
+
+              <div className="flex gap-3">
+
+                <FiPhone className="mt-1 text-brand-accent" />
+
+                <div>
+
+                  <p className="text-gray-300">
+                    +91 9422689726
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div className="flex gap-3">
+
+                <FiMail className="mt-1 text-brand-accent" />
+
+                <div>
+
+                  <p className="text-gray-300">
+                    info@unikdrippy.com
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div className="flex gap-3">
+
+                <FiMapPin className="mt-1 text-brand-accent" />
+
+                <div>
+
+                  <p className="text-gray-300">
+                    Pune, Maharashtra, India
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
           </div>
 
-          {/* Social */}
+          {/* Newsletter */}
+
           <div>
-            <h3 className="text-white font-semibold mb-4 text-lg font-display tracking-wide">Follow Us</h3>
-            <div className="flex space-x-4">
-              <a href="https://instagram.com/unique_drippyapparels" target="_blank" rel="noreferrer" className="bg-white/5 p-3 rounded-full hover:bg-brand-accent hover:text-black transition-all">
-                <Instagram size={20} />
-              </a>
+
+            <h3 className="text-xl font-semibold text-white mb-5">
+              Stay Updated
+            </h3>
+
+            <p className="text-gray-400 mb-5">
+              Get updates on new collections,
+              offers and exclusive drops.
+            </p>
+
+            <div className="flex">
+
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="flex-1 p-3 rounded-l-xl bg-brand-secondary border border-white/10 text-white focus:outline-none"
+              />
+
+              <button
+                className="bg-brand-accent px-5 rounded-r-xl text-black hover:bg-brand-teal hover:text-white transition"
+              >
+                <FiArrowRight />
+              </button>
+
             </div>
+
           </div>
-          
+
         </div>
-        
-        <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center">
-          <p>&copy; {new Date().getFullYear()} Uniक Drippy Apparels. All rights reserved.</p>
-          <p className="mt-2 md:mt-0">Designed for the Culture.</p>
-        </div>
+
       </div>
+
+      {/* Bottom */}
+
+      <div className="border-t border-white/10">
+
+        <div className="container-custom py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+
+          <p className="text-gray-500 text-sm">
+            © {new Date().getFullYear()} Unik Drippy Apparels.
+            All Rights Reserved.
+          </p>
+
+          <div className="flex gap-6 text-sm">
+
+            <a href="#" className="text-gray-500 hover:text-brand-accent">
+              Privacy Policy
+            </a>
+
+            <a href="#" className="text-gray-500 hover:text-brand-accent">
+              Terms & Conditions
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </footer>
   );
 };
