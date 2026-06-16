@@ -92,13 +92,13 @@ const Gallery = () => {
         <div className="text-center mt-14">
 
           <a
-            href="https://instagram.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="primary-btn"
-          >
-            Follow on Instagram
-          </a>
+  href="https://instagram.com/unique_drippyapparels"
+  target="_blank"
+  rel="noreferrer"
+  className="primary-btn"
+>
+  Follow @unique_drippyapparels
+</a>
 
         </div>
 
