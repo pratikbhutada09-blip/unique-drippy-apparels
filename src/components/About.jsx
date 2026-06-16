@@ -27,22 +27,22 @@ const stats = [
 
 const features = [
   {
-    icon: <FiAward size={34} />,
+    icon: FiAward,
     title: "Premium Quality",
     desc: "Carefully selected fabrics with superior comfort and durability.",
   },
   {
-    icon: <FiStar size={34} />,
+    icon: FiStar,
     title: "Unique Designs",
     desc: "Fashion-forward collections created for modern youth culture.",
   },
   {
-    icon: <FiUsers size={34} />,
+    icon: FiUsers,
     title: "Bulk Orders",
     desc: "Corporate, college, event and startup merchandise solutions.",
   },
   {
-    icon: <FiShield size={34} />,
+    icon: FiShield,
     title: "Trusted Service",
     desc: "Reliable production, customization and Pan India delivery.",
   },
@@ -56,10 +56,7 @@ const About = () => {
     >
       <div className="container-custom">
 
-        {/* Heading */}
-
         <div className="text-center mb-16">
-
           <span className="text-brand-accent uppercase tracking-[0.35em] text-sm">
             About Us
           </span>
@@ -71,14 +68,9 @@ const About = () => {
 
           <p className="section-subtitle mt-6">
             Unik Drippy Apparels is built for people who express
-            themselves through fashion. We combine creativity,
-            premium fabrics and customization to create clothing
-            that stands out.
+            themselves through fashion.
           </p>
-
         </div>
-
-        {/* Story */}
 
         <div className="grid lg:grid-cols-2 gap-14 items-center">
 
@@ -88,13 +80,11 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-
             <img
               src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=2070&auto=format&fit=crop"
               alt="About"
               className="rounded-3xl shadow-card"
             />
-
           </motion.div>
 
           <motion.div
@@ -103,36 +93,26 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-
             <h3 className="text-4xl font-display text-white mb-6">
               Fashion with Identity
             </h3>
 
             <p className="text-gray-300 leading-8 mb-6">
               We believe every individual and every organization
-              deserves apparel that reflects its identity. From
-              oversized streetwear and tie & dye collections to
-              customized corporate uniforms and event merchandise,
-              our focus is on quality, creativity and customer
-              satisfaction.
+              deserves apparel that reflects its identity.
             </p>
 
             <p className="text-gray-300 leading-8">
               Whether you need one personalized t-shirt or a bulk
               corporate order, our team delivers premium products
-              with attention to detail and on-time execution.
+              with attention to detail.
             </p>
-
           </motion.div>
 
         </div>
 
-        {/* Statistics */}
-
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-20">
-
           {stats.map((item, index) => (
-
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -144,7 +124,6 @@ const About = () => {
               }}
               className="card p-8 text-center"
             >
-
               <h3 className="text-4xl font-display text-brand-accent mb-3">
                 {item.number}
               </h3>
@@ -152,14 +131,9 @@ const About = () => {
               <p className="text-gray-300 uppercase tracking-wider">
                 {item.title}
               </p>
-
             </motion.div>
-
           ))}
-
         </div>
-
-        {/* Why Choose Us */}
 
         <div className="mt-20">
 
@@ -169,35 +143,35 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-            {features.map((item, index) => (
+            {features.map((item, index) => {
+              const Icon = item.icon;
 
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                }}
-                className="card p-8 text-center hover-lift"
-              >
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1,
+                  }}
+                  className="card p-8 text-center hover-lift"
+                >
+                  <div className="flex justify-center text-brand-accent mb-5">
+                    <Icon size={34} />
+                  </div>
 
-                <div className="flex justify-center text-brand-accent mb-5">
-                  {item.icon}
-                </div>
+                  <h4 className="text-2xl font-display text-white mb-4">
+                    {item.title}
+                  </h4>
 
-                <h4 className="text-2xl font-display text-white mb-4">
-                  {item.title}
-                </h4>
-
-                <p className="text-gray-300">
-                  {item.desc}
-                </p>
-
-              </motion.div>
-
-            ))}
+                  <p className="text-gray-300">
+                    {item.desc}
+                  </p>
+                </motion.div>
+              );
+            })}
 
           </div>
 
