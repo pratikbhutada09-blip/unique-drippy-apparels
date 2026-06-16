@@ -70,16 +70,10 @@ const Stats = () => {
               className="glass rounded-3xl p-10 text-center border border-white/10"
             >
 
-              <div className="text-5xl font-display font-bold text-brand-accent">
-
-                <CountUp
-                  end={item.value}
-                  duration={2}
-                />
-
-                {item.suffix}
-
-              </div>
+             <div className="text-5xl font-display font-bold text-brand-accent">
+  {item.value}
+  {item.suffix}
+</div>
 
               <div className="mt-4 text-gray-300 uppercase tracking-wider text-sm">
                 {item.title}
