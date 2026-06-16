@@ -38,13 +38,13 @@ const Footer = () => {
             <div className="flex gap-4 mt-6">
 
               <a
-                href="https://instagram.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-brand-accent hover:text-black transition"
-              >
-                <FiInstagram />
-              </a>
+  href="https://instagram.com/unique_drippyapparels"
+  target="_blank"
+  rel="noreferrer"
+  className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-brand-accent hover:text-black transition"
+>
+  <FiInstagram />
+</a>
 
               <a
                 href="https://facebook.com/"
