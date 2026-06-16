@@ -136,9 +136,12 @@ const Footer = () => {
 
                 <div>
 
-                  <p className="text-gray-300">
-                    info@unikdrippy.com
-                  </p>
+                <a
+  href="mailto:pratikbhutada09@gmail.com"
+  className="text-gray-300 hover:text-brand-accent transition"
+>
+  pratikbhutada09@gmail.com
+</a>
 
                 </div>
 
