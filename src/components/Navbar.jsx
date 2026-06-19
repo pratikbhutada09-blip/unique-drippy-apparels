@@ -46,37 +46,33 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-black/70 backdrop-blur-xl shadow-xl border-b border-white/10"
-          : "bg-transparent"
+          ? "bg-white/95 backdrop-blur-xl shadow-lg border-b border-gray-200"
+          : "bg-white/80 backdrop-blur-md"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="h-20 flex items-center justify-between">
 
           {/* Logo */}
-
           <a href="#home">
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="text-3xl font-display font-bold tracking-wider"
             >
-              <span className="text-white">Uni</span>
-
+              <span className="text-black">Uni</span>
               <span className="text-brand-accent">क</span>
-
               <span className="text-brand-teal"> Drippy</span>
             </motion.div>
           </a>
 
           {/* Desktop Menu */}
-
           <div className="hidden md:flex items-center space-x-8">
 
             {menuItems.map((item) => (
               <a
                 key={item.title}
                 href={item.link}
-                className="text-white hover:text-brand-accent transition duration-300 uppercase tracking-widest text-sm"
+                className="text-gray-800 hover:text-brand-accent transition duration-300 uppercase tracking-widest text-sm"
               >
                 {item.title}
               </a>
@@ -84,7 +80,7 @@ const Navbar = () => {
 
             <a
               href="#collections"
-              className="px-5 py-2 rounded-full bg-brand-accent text-black font-bold hover:bg-brand-teal hover:text-white transition duration-300"
+              className="px-5 py-2 rounded-full bg-brand-accent text-white font-bold hover:bg-brand-teal transition duration-300"
             >
               Shop Now
             </a>
@@ -92,9 +88,8 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Icon */}
-
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-black"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? <FiX size={28} /> : <FiMenu size={28} />}
@@ -104,12 +99,11 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-
       {mobileOpen && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="md:hidden bg-black/95 backdrop-blur-xl"
+          className="md:hidden bg-white border-t border-gray-200"
         >
           <div className="flex flex-col py-6">
 
@@ -118,21 +112,19 @@ const Navbar = () => {
                 key={item.title}
                 href={item.link}
                 onClick={() => setMobileOpen(false)}
-                className="py-4 text-center text-white hover:text-brand-accent uppercase tracking-widest"
+                className="py-4 text-center text-gray-800 hover:text-brand-accent uppercase tracking-widest"
               >
                 {item.title}
               </a>
             ))}
 
             <div className="px-6 mt-4">
-
               <a
                 href="#collections"
-                className="block text-center py-3 rounded-lg bg-brand-accent text-black font-bold"
+                className="block text-center py-3 rounded-lg bg-brand-accent text-white font-bold"
               >
                 Shop Now
               </a>
-
             </div>
 
           </div>
