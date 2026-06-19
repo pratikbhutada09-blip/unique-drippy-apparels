@@ -20,7 +20,6 @@ gold: "#F59E0B",
 },
 },
 
-```
   fontFamily: {
     sans: ["Inter", "sans-serif"],
     display: ["Oswald", "sans-serif"],
@@ -68,7 +67,7 @@ gold: "#F59E0B",
     },
   },
 },
-```
+
 
 },
 
