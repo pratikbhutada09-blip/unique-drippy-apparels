@@ -54,7 +54,7 @@ return ( <section
    className="py-24 bg-white"
  > <div className="container-custom">
 
-```
+
     <div className="text-center mb-16">
       <span className="text-brand-accent uppercase tracking-[0.35em] text-sm">
         About Us
@@ -180,7 +180,6 @@ return ( <section
 
   </div>
 </section>
-```
 
 );
 };
