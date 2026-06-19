@@ -9,30 +9,22 @@ import Home from "./pages/Home";
 function App() {
   return (
     <Router>
-
-      <div className="bg-brand-dark text-white min-h-screen overflow-x-hidden">
-
+      <div className="bg-white text-black min-h-screen overflow-x-hidden">
         <Navbar />
 
         <main>
-
           <Routes>
-
             <Route
               path="/"
               element={<Home />}
             />
-
           </Routes>
-
         </main>
 
         <Footer />
 
         <FloatingWhatsApp />
-
       </div>
-
     </Router>
   );
 }
