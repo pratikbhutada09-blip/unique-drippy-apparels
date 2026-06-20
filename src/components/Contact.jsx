@@ -14,6 +14,8 @@ const Contact = () => {
     >
       <div className="max-w-6xl mx-auto px-6">
 
+        {/* Heading */}
+
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -29,6 +31,8 @@ const Contact = () => {
             For Custom Printing, Bulk Orders & Premium Streetwear
           </p>
         </motion.div>
+
+        {/* Contact Cards */}
 
         <div className="grid md:grid-cols-2 gap-8">
 
@@ -106,7 +110,7 @@ const Contact = () => {
 
         </div>
 
-        {/* Business Info */}
+        {/* Store Information */}
 
         <div className="mt-16 bg-white rounded-3xl p-8 shadow-xl border border-gray-200">
 
@@ -114,15 +118,16 @@ const Contact = () => {
             Store Information
           </h3>
 
-          <div className="grid md:grid-cols-3 gap-6 text-center">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
 
             <div>
+
               <FiMail
                 size={30}
                 className="mx-auto mb-3 text-brand-accent"
               />
 
-              <p className="font-semibold text-black">
+              <p className="font-semibold text-black mb-2">
                 Email
               </p>
 
@@ -132,15 +137,17 @@ const Contact = () => {
               >
                 pratikbhutada09@gmail.com
               </a>
+
             </div>
 
             <div>
+
               <FiMapPin
                 size={30}
                 className="mx-auto mb-3 text-brand-accent"
               />
 
-              <p className="font-semibold text-black">
+              <p className="font-semibold text-black mb-2">
                 Location
               </p>
 
@@ -149,17 +156,19 @@ const Contact = () => {
               </p>
 
               <p className="text-gray-600">
-                Pune, Maharashtra
+                Pune, Maharashtra, India
               </p>
+
             </div>
 
             <div>
+
               <FiPhone
                 size={30}
                 className="mx-auto mb-3 text-brand-accent"
               />
 
-              <p className="font-semibold text-black">
+              <p className="font-semibold text-black mb-2">
                 Contact
               </p>
 
@@ -170,6 +179,7 @@ const Contact = () => {
               <p className="text-gray-600">
                 +91 88880 58587
               </p>
+
             </div>
 
           </div>
@@ -184,30 +194,38 @@ const Contact = () => {
             Visit Our Store
           </h3>
 
-          <div className="overflow-hidden rounded-3xl shadow-xl border border-gray-200">
+          <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden">
 
             <iframe
               title="PRINCESS THE LADIES WEAR"
               src="https://maps.google.com/maps?q=18.5090527,73.8324084&z=17&output=embed"
               width="100%"
-              height="450"
+              height="280"
               style={{ border: 0 }}
               loading="lazy"
               allowFullScreen=""
             ></iframe>
 
-          </div>
+            <div className="p-6 text-center">
 
-          <div className="text-center mt-6">
+              <h4 className="text-xl font-bold text-black">
+                PRINCESS THE LADIES WEAR
+              </h4>
 
-            <a
-              href="https://www.google.com/maps/place/PRINCESS+THE+LADIES+WEAR/@18.5090527,73.8324084,17z"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-3 rounded-xl bg-brand-accent text-white font-bold hover:bg-brand-teal transition"
-            >
-              Open in Google Maps
-            </a>
+              <p className="text-gray-600 mt-2">
+                Pune, Maharashtra, India
+              </p>
+
+              <a
+                href="https://www.google.com/maps/place/PRINCESS+THE+LADIES+WEAR/@18.5090527,73.8324084,17z"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 px-6 py-3 rounded-xl bg-brand-accent text-white font-semibold hover:bg-brand-teal transition"
+              >
+                Get Directions
+              </a>
+
+            </div>
 
           </div>
 
