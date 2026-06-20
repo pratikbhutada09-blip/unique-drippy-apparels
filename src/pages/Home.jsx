@@ -8,6 +8,7 @@ import Stats from "../components/Stats";
 import Testimonials from "../components/Testimonials";
 import Gallery from "../components/Gallery";
 import CTA from "../components/CTA";
+import OrderForm from "../components/OrderForm";
 import Contact from "../components/Contact";
 
 const Home = () => {
@@ -28,6 +29,9 @@ const Home = () => {
       <Gallery />
 
       <CTA />
+
+      {/* Order Form Section */}
+      <OrderForm />
 
       <Contact />
     </>
