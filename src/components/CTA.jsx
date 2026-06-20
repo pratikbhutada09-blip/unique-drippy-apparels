@@ -1,38 +1,37 @@
 import { motion } from "framer-motion";
-import { FiMessageCircle, FiPhoneCall } from "react-icons/fi";
+import {
+  FiMessageCircle,
+  FiPhoneCall,
+} from "react-icons/fi";
 
 const CTA = () => {
   return (
     <section
       id="cta"
-      className="relative py-24 overflow-hidden bg-brand-secondary"
+      className="py-24 bg-white"
     >
-      {/* Background Glow */}
-      <div className="absolute inset-0">
-        <div className="absolute -top-20 left-20 w-96 h-96 bg-brand-accent/20 rounded-full blur-[140px]"></div>
-        <div className="absolute bottom-0 right-20 w-96 h-96 bg-brand-teal/20 rounded-full blur-[140px]"></div>
-      </div>
-
-      <div className="container-custom relative z-10">
+      <div className="container-custom">
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="glass rounded-3xl p-10 lg:p-16 text-center"
+          className="bg-gradient-to-r from-sky-50 to-cyan-50 border border-gray-200 rounded-3xl p-10 lg:p-16 text-center shadow-xl"
         >
 
-          <span className="text-brand-accent uppercase tracking-[0.35em] text-sm">
+          {/* Heading */}
+
+          <span className="text-brand-accent uppercase tracking-[0.35em] text-sm font-semibold">
             Start Your Order
           </span>
 
-          <h2 className="section-title mt-5">
+          <h2 className="mt-5 text-4xl md:text-6xl font-display font-bold text-black">
             Design Your
             <span className="text-gradient"> Dream Apparel</span>
           </h2>
 
-          <p className="section-subtitle mt-6 max-w-3xl mx-auto">
+          <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-700">
             Whether you need a single customized t-shirt,
             college merchandise, corporate uniforms,
             sports jerseys or bulk event apparel,
@@ -43,19 +42,19 @@ const CTA = () => {
 
           <div className="flex flex-wrap justify-center gap-4 mt-10">
 
-            <div className="glass px-5 py-3 rounded-full text-white">
+            <div className="px-5 py-3 rounded-full bg-white border border-gray-200 text-gray-800 font-medium shadow-sm">
               Premium Fabric
             </div>
 
-            <div className="glass px-5 py-3 rounded-full text-white">
+            <div className="px-5 py-3 rounded-full bg-white border border-gray-200 text-gray-800 font-medium shadow-sm">
               Custom Printing
             </div>
 
-            <div className="glass px-5 py-3 rounded-full text-white">
+            <div className="px-5 py-3 rounded-full bg-white border border-gray-200 text-gray-800 font-medium shadow-sm">
               Bulk Orders
             </div>
 
-            <div className="glass px-5 py-3 rounded-full text-white">
+            <div className="px-5 py-3 rounded-full bg-white border border-gray-200 text-gray-800 font-medium shadow-sm">
               Pan India Delivery
             </div>
 
@@ -85,7 +84,9 @@ const CTA = () => {
 
           </div>
 
-          <p className="mt-8 text-gray-400 text-sm">
+          {/* Footer Text */}
+
+          <p className="mt-8 text-gray-600 text-sm">
             Fast quotations • Premium quality • Competitive pricing
           </p>
 
