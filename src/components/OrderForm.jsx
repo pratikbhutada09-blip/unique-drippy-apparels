@@ -45,9 +45,7 @@ try {
   });
 
   // WhatsApp Message
-  const whatsappMessage = `
-
-
+ const whatsappMessage = `
 *New Order Received*
 
 Name: ${formData.name}
@@ -59,15 +57,14 @@ Quantity: ${formData.quantity}
 
 Message:
 ${formData.message}
-;
+`;
 
-
-  window.open(
-    `https://wa.me/919422689726?text=${encodeURIComponent(
-      whatsappMessage
-    )}`,
-    "_blank"
-  );
+window.open(
+`https://wa.me/919422689726?text=${encodeURIComponent(
+    whatsappMessage
+  )}`,
+"_blank"
+);
 
   toast.success("Order Submitted Successfully!");
 
