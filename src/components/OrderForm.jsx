@@ -76,8 +76,14 @@ ${formData.message}
         message: "",
       });
     } catch (error) {
-      console.error(error);
-      toast.error("Failed to submit order");
+  console.error("EMAILJS ERROR:", error);
+
+  alert(
+    JSON.stringify(error, null, 2)
+  );
+
+  toast.error("Failed to submit order");
+}
     } finally {
       setLoading(false);
     }
