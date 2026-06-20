@@ -2,9 +2,18 @@ import { motion } from "framer-motion";
 import {
   FiMessageCircle,
   FiPhoneCall,
+  FiShoppingBag,
 } from "react-icons/fi";
 
 const CTA = () => {
+  const scrollToOrder = () => {
+    document
+      .getElementById("order")
+      ?.scrollIntoView({
+        behavior: "smooth",
+      });
+  };
+
   return (
     <section
       id="cta"
@@ -28,17 +37,20 @@ const CTA = () => {
 
           <h2 className="mt-5 text-4xl md:text-6xl font-display font-bold text-black">
             Design Your
-            <span className="text-gradient"> Dream Apparel</span>
+            <span className="text-gradient">
+              {" "}Dream Apparel
+            </span>
           </h2>
 
           <p className="mt-6 max-w-3xl mx-auto text-lg text-gray-700">
             Whether you need a single customized t-shirt,
             college merchandise, corporate uniforms,
-            sports jerseys or bulk event apparel,
-            our team is ready to bring your ideas to life.
+            sports jerseys, event merchandise or bulk
+            apparel, our team is ready to bring your
+            ideas to life.
           </p>
 
-          {/* Feature Pills */}
+          {/* Features */}
 
           <div className="flex flex-wrap justify-center gap-4 mt-10">
 
@@ -64,15 +76,29 @@ const CTA = () => {
 
           <div className="flex flex-col md:flex-row justify-center gap-5 mt-12">
 
+            {/* Order Form */}
+
+            <button
+              onClick={scrollToOrder}
+              className="primary-btn flex items-center justify-center gap-3"
+            >
+              <FiShoppingBag size={20} />
+              Order Now
+            </button>
+
+            {/* WhatsApp */}
+
             <a
               href="https://wa.me/919422689726"
               target="_blank"
               rel="noreferrer"
-              className="primary-btn flex items-center justify-center gap-3"
+              className="secondary-btn flex items-center justify-center gap-3"
             >
               <FiMessageCircle size={20} />
               WhatsApp Now
             </a>
+
+            {/* Call */}
 
             <a
               href="tel:+919422689726"
@@ -84,7 +110,7 @@ const CTA = () => {
 
           </div>
 
-          {/* Footer Text */}
+          {/* Footer */}
 
           <p className="mt-8 text-gray-600 text-sm">
             Fast quotations • Premium quality • Competitive pricing
