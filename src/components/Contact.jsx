@@ -1,11 +1,16 @@
 import { motion } from "framer-motion";
-import { FiPhone, FiMessageCircle } from "react-icons/fi";
+import {
+  FiPhone,
+  FiMessageCircle,
+  FiMail,
+  FiMapPin,
+} from "react-icons/fi";
 
 const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-24 bg-gradient-to-b from-black to-gray-900"
+      className="py-24 bg-white"
     >
       <div className="max-w-6xl mx-auto px-6">
 
@@ -16,100 +21,197 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-5xl font-bold text-white mb-4">
+          <h2 className="text-5xl font-bold text-black mb-4">
             Get In Touch
           </h2>
 
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-600 text-lg">
             For Custom Printing, Bulk Orders & Premium Streetwear
           </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="bg-white/5 backdrop-blur-xl rounded-3xl p-10 border border-white/10 shadow-2xl"
-        >
+        <div className="grid md:grid-cols-2 gap-8">
 
-          <div className="grid md:grid-cols-2 gap-8">
+          {/* Sharayu */}
 
-            {/* Sharayu */}
+          <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-200 text-center">
 
-            <div className="bg-black/30 rounded-2xl p-6 text-center hover:scale-105 transition">
+            <h3 className="text-3xl font-bold text-brand-accent mb-3">
+              Sharayu
+            </h3>
 
-              <h3 className="text-3xl font-bold text-brand-accent mb-3">
-                Sharayu
-              </h3>
+            <p className="text-gray-600 mb-6">
+              Sales & Customer Support
+            </p>
 
-              <p className="text-gray-300 mb-6">
-                Sales & Customer Support
+            <a
+              href="tel:+919422689726"
+              className="flex items-center justify-center gap-2 bg-brand-accent text-white font-bold py-3 rounded-xl mb-4 hover:bg-brand-teal transition"
+            >
+              <FiPhone />
+              Call Now
+            </a>
+
+            <a
+              href="https://wa.me/919422689726"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 bg-green-600 text-white font-bold py-3 rounded-xl hover:bg-green-700 transition"
+            >
+              <FiMessageCircle />
+              WhatsApp
+            </a>
+
+            <p className="mt-5 text-gray-700">
+              +91 94226 89726
+            </p>
+
+          </div>
+
+          {/* Pratik */}
+
+          <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-200 text-center">
+
+            <h3 className="text-3xl font-bold text-brand-accent mb-3">
+              Pratik
+            </h3>
+
+            <p className="text-gray-600 mb-6">
+              Orders & Corporate Enquiries
+            </p>
+
+            <a
+              href="tel:+918888058587"
+              className="flex items-center justify-center gap-2 bg-brand-accent text-white font-bold py-3 rounded-xl mb-4 hover:bg-brand-teal transition"
+            >
+              <FiPhone />
+              Call Now
+            </a>
+
+            <a
+              href="https://wa.me/918888058587"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 bg-green-600 text-white font-bold py-3 rounded-xl hover:bg-green-700 transition"
+            >
+              <FiMessageCircle />
+              WhatsApp
+            </a>
+
+            <p className="mt-5 text-gray-700">
+              +91 88880 58587
+            </p>
+
+          </div>
+
+        </div>
+
+        {/* Business Info */}
+
+        <div className="mt-16 bg-white rounded-3xl p-8 shadow-xl border border-gray-200">
+
+          <h3 className="text-3xl font-bold text-center text-black mb-8">
+            Store Information
+          </h3>
+
+          <div className="grid md:grid-cols-3 gap-6 text-center">
+
+            <div>
+              <FiMail
+                size={30}
+                className="mx-auto mb-3 text-brand-accent"
+              />
+
+              <p className="font-semibold text-black">
+                Email
               </p>
 
               <a
-                href="tel:+919422689726"
-                className="flex items-center justify-center gap-2 bg-brand-accent text-black font-bold py-3 rounded-xl mb-4 hover:bg-brand-teal transition"
+                href="mailto:pratikbhutada09@gmail.com"
+                className="text-gray-600 hover:text-brand-accent"
               >
-                <FiPhone />
-                Call Now
+                pratikbhutada09@gmail.com
               </a>
+            </div>
 
-              <a
-                href="https://wa.me/919422689726"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-green-600 text-white font-bold py-3 rounded-xl hover:bg-green-700 transition"
-              >
-                <FiMessageCircle />
-                WhatsApp
-              </a>
+            <div>
+              <FiMapPin
+                size={30}
+                className="mx-auto mb-3 text-brand-accent"
+              />
 
-              <p className="mt-5 text-white">
+              <p className="font-semibold text-black">
+                Location
+              </p>
+
+              <p className="text-gray-600">
+                PRINCESS THE LADIES WEAR
+              </p>
+
+              <p className="text-gray-600">
+                Pune, Maharashtra
+              </p>
+            </div>
+
+            <div>
+              <FiPhone
+                size={30}
+                className="mx-auto mb-3 text-brand-accent"
+              />
+
+              <p className="font-semibold text-black">
+                Contact
+              </p>
+
+              <p className="text-gray-600">
                 +91 94226 89726
               </p>
 
-            </div>
-
-            {/* Pratik */}
-
-            <div className="bg-black/30 rounded-2xl p-6 text-center hover:scale-105 transition">
-
-              <h3 className="text-3xl font-bold text-brand-accent mb-3">
-                Pratik
-              </h3>
-
-              <p className="text-gray-300 mb-6">
-                Orders & Corporate Enquiries
-              </p>
-
-              <a
-                href="tel:+918888058587"
-                className="flex items-center justify-center gap-2 bg-brand-accent text-black font-bold py-3 rounded-xl mb-4 hover:bg-brand-teal transition"
-              >
-                <FiPhone />
-                Call Now
-              </a>
-
-              <a
-                href="https://wa.me/918888058587"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-green-600 text-white font-bold py-3 rounded-xl hover:bg-green-700 transition"
-              >
-                <FiMessageCircle />
-                WhatsApp
-              </a>
-
-              <p className="mt-5 text-white">
+              <p className="text-gray-600">
                 +91 88880 58587
               </p>
-
             </div>
 
           </div>
 
-        </motion.div>
+        </div>
+
+        {/* Google Map */}
+
+        <div className="mt-16">
+
+          <h3 className="text-3xl font-bold text-center text-black mb-8">
+            Visit Our Store
+          </h3>
+
+          <div className="overflow-hidden rounded-3xl shadow-xl border border-gray-200">
+
+            <iframe
+              title="PRINCESS THE LADIES WEAR"
+              src="https://maps.google.com/maps?q=18.5090527,73.8324084&z=17&output=embed"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen=""
+            ></iframe>
+
+          </div>
+
+          <div className="text-center mt-6">
+
+            <a
+              href="https://www.google.com/maps/place/PRINCESS+THE+LADIES+WEAR/@18.5090527,73.8324084,17z"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 rounded-xl bg-brand-accent text-white font-bold hover:bg-brand-teal transition"
+            >
+              Open in Google Maps
+            </a>
+
+          </div>
+
+        </div>
 
       </div>
     </section>
