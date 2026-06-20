@@ -1,52 +1,6 @@
-@import "tailwindcss";
-
-/* --------------------------
-Tailwind v4 Theme Config
-(replaces tailwind.config.js)
----------------------------*/
-
-@theme {
-  /* Brand Colors */
-  --color-brand-dark: #FFFFFF;
-  --color-brand-secondary: #F8FAFC;
-  --color-brand-light: #FFFFFF;
-  --color-brand-accent: #38BDF8;
-  --color-brand-teal: #14B8A6;
-  --color-brand-gray: #6B7280;
-  --color-brand-gold: #F59E0B;
-
-  /* Fonts */
-  --font-family-sans: "Inter", sans-serif;
-  --font-family-display: "Oswald", sans-serif;
-
-  /* Box Shadows */
-  --shadow-glow: 0 0 20px rgba(56,189,248,0.25);
-  --shadow-card: 0 10px 30px rgba(0,0,0,0.08);
-
-  /* Background Images */
-  --background-image-hero-gradient: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 50%, #E5E7EB 100%);
-  --background-image-accent-gradient: linear-gradient(90deg, #38BDF8, #14B8A6);
-
-  /* Animations */
-  --animate-float: float 4s ease-in-out infinite;
-  --animate-pulse-slow: pulse 3s infinite;
-  --animate-fade-up: fadeUp 0.8s ease forwards;
-
-  /* Keyframes */
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50%       { transform: translateY(-12px); }
-  }
-
-  @keyframes fadeUp {
-    0%   { opacity: 0; transform: translateY(30px); }
-    100% { opacity: 1; transform: translateY(0px); }
-  }
-}
-
-/* --------------------------
-Global Styles
----------------------------*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
   scroll-behavior: smooth;
@@ -61,14 +15,10 @@ body {
   overflow-x: hidden;
 }
 
-/* Selection */
-
 ::selection {
   background: #38BDF8;
   color: #ffffff;
 }
-
-/* Scrollbar */
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -87,24 +37,15 @@ body {
   background: #38BDF8;
 }
 
-/* Links */
-
 a {
   text-decoration: none;
 }
-
-/* Images */
 
 img {
   user-select: none;
 }
 
-/* --------------------------
-Reusable Components
----------------------------*/
-
 @layer components {
-
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
@@ -116,8 +57,7 @@ Reusable Components
   }
 
   .section-title {
-    @apply text-4xl md:text-6xl font-bold uppercase tracking-tight text-black;
-    font-family: "Oswald", sans-serif;
+    @apply text-4xl md:text-6xl font-display font-bold uppercase tracking-tight text-black;
   }
 
   .section-subtitle {
@@ -125,12 +65,7 @@ Reusable Components
   }
 
   .primary-btn {
-    @apply px-8 py-4 rounded-lg font-bold uppercase tracking-widest text-white transition-all duration-300 hover:scale-105;
-    background-color: #38BDF8;
-  }
-
-  .primary-btn:hover {
-    background-color: #14B8A6;
+    @apply px-8 py-4 rounded-lg font-bold uppercase tracking-widest bg-brand-accent text-white transition-all duration-300 hover:bg-brand-teal hover:text-white hover:scale-105;
   }
 
   .secondary-btn {
@@ -142,10 +77,6 @@ Reusable Components
   }
 }
 
-/* --------------------------
-Gradient Text
----------------------------*/
-
 .text-gradient {
   background: linear-gradient(90deg, #38BDF8, #14B8A6);
   -webkit-background-clip: text;
@@ -153,10 +84,6 @@ Gradient Text
   background-clip: text;
   color: transparent;
 }
-
-/* --------------------------
-Animated Glow
----------------------------*/
 
 .glow-blue {
   box-shadow: 0 0 20px rgba(56, 189, 248, .25), 0 0 40px rgba(56, 189, 248, .10);
@@ -166,10 +93,6 @@ Animated Glow
   box-shadow: 0 0 20px rgba(20, 184, 166, .25), 0 0 40px rgba(20, 184, 166, .10);
 }
 
-/* --------------------------
-Hover Animation
----------------------------*/
-
 .hover-lift {
   transition: all .35s ease;
 }
@@ -177,10 +100,6 @@ Hover Animation
 .hover-lift:hover {
   transform: translateY(-8px);
 }
-
-/* --------------------------
-Fade Animation
----------------------------*/
 
 .fade-up {
   animation: fadeUp .8s ease;
