@@ -1,21 +1,30 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { Toaster } from "react-hot-toast";
+import Hero from "../components/Hero";
+import Collection from "../components/Collection";
+import Customize from "../components/Customize";
+import About from "../components/About";
+import CTA from "../components/CTA";
+import OrderForm from "../components/OrderForm";
+import Contact from "../components/Contact";
 
-import App from "./App.jsx";
-import "./index.css";
+const Home = () => {
+  return (
+    <>
+      <Hero />
 
-ReactDOM.createRoot(
-  document.getElementById("root")
-).render(
-  <React.StrictMode>
-    <App />
+      <Collection />
 
-    <Toaster
-      position="top-right"
-      toastOptions={{
-        duration: 3000,
-      }}
-    />
-  </React.StrictMode>
-);
+      <Customize />
+
+      <About />
+
+      <CTA />
+
+      {/* Order Form */}
+      <OrderForm />
+
+      <Contact />
+    </>
+  );
+};
+
+export default Home;
