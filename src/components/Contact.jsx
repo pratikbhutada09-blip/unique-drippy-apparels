@@ -174,7 +174,6 @@ return ( <section
                 pratikbhutada09@gmail.com
               </a>
             </div>
-
             <div>
               <p className="font-semibold text-black">
                 Phone
