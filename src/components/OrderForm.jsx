@@ -106,7 +106,7 @@ return ( <section
    className="py-24 bg-gradient-to-b from-white to-gray-50"
  > <div className="max-w-4xl mx-auto px-6">
 
-```
+
     <div className="text-center mb-12">
       <h2 className="text-5xl font-bold text-black mb-4">
         Start Your Order
