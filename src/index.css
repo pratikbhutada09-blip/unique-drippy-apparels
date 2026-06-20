@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* --------------------------
+Global Styles
+---------------------------*/
+
 html {
   scroll-behavior: smooth;
 }
@@ -45,6 +49,10 @@ img {
   user-select: none;
 }
 
+/* --------------------------
+Reusable Components
+---------------------------*/
+
 @layer components {
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
@@ -77,6 +85,10 @@ img {
   }
 }
 
+/* --------------------------
+Gradient Text
+---------------------------*/
+
 .text-gradient {
   background: linear-gradient(90deg, #38BDF8, #14B8A6);
   -webkit-background-clip: text;
@@ -85,24 +97,36 @@ img {
   color: transparent;
 }
 
+/* --------------------------
+Animated Glow
+---------------------------*/
+
 .glow-blue {
-  box-shadow: 0 0 20px rgba(56, 189, 248, .25), 0 0 40px rgba(56, 189, 248, .10);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.25), 0 0 40px rgba(56, 189, 248, 0.10);
 }
 
 .glow-teal {
-  box-shadow: 0 0 20px rgba(20, 184, 166, .25), 0 0 40px rgba(20, 184, 166, .10);
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.25), 0 0 40px rgba(20, 184, 166, 0.10);
 }
 
+/* --------------------------
+Hover Animation
+---------------------------*/
+
 .hover-lift {
-  transition: all .35s ease;
+  transition: all 0.35s ease;
 }
 
 .hover-lift:hover {
   transform: translateY(-8px);
 }
 
+/* --------------------------
+Fade Animation
+---------------------------*/
+
 .fade-up {
-  animation: fadeUp .8s ease;
+  animation: fadeUp 0.8s ease;
 }
 
 @keyframes fadeUp {
