@@ -12,7 +12,6 @@ return ( <section
    className="py-24 bg-white"
  > <div className="max-w-6xl mx-auto px-6">
 
-```
     {/* Heading */}
 
     <motion.div
@@ -209,7 +208,6 @@ return ( <section
 
   </div>
 </section>
-```
 
 );
 };
