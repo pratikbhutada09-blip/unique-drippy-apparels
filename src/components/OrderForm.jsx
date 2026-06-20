@@ -75,19 +75,37 @@ ${formData.message}
         quantity: "",
         message: "",
       });
-    } catch (error) {
-  console.error("EMAILJS ERROR:", error);
+    } try {
+  setLoading(true);
+
+  await sendEmail(formData);
+
+  toast.success("Order Submitted Successfully!");
+
+  setFormData({
+    name: "",
+    phone: "",
+    email: "",
+    product: "",
+    quantity: "",
+    message: "",
+  });
+
+} catch (error) {
+
+  console.log("FULL ERROR", error);
 
   alert(
     JSON.stringify(error, null, 2)
   );
 
   toast.error("Failed to submit order");
-}
-    } finally {
-      setLoading(false);
-    }
-  };
+
+} finally {
+
+  setLoading(false);
+
+}  };
 
   return (
     <section
