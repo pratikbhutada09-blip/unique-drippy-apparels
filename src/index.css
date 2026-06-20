@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* --------------------------
-Global Styles
----------------------------*/
+/* Global Styles */
 
 html {
   scroll-behavior: smooth;
@@ -19,14 +17,10 @@ body {
   overflow-x: hidden;
 }
 
-/* Selection */
-
 ::selection {
   background: #38BDF8;
   color: #ffffff;
 }
-
-/* Scrollbar */
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -45,24 +39,17 @@ body {
   background: #38BDF8;
 }
 
-/* Links */
-
 a {
   text-decoration: none;
 }
-
-/* Images */
 
 img {
   user-select: none;
 }
 
-/* --------------------------
-Reusable Components
----------------------------*/
+/* Reusable Components */
 
 @layer components {
-
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
@@ -94,9 +81,7 @@ Reusable Components
   }
 }
 
-/* --------------------------
-Gradient Text
----------------------------*/
+/* Gradient Text */
 
 .text-gradient {
   background: linear-gradient(90deg, #38BDF8, #14B8A6);
@@ -106,25 +91,17 @@ Gradient Text
   color: transparent;
 }
 
-/* --------------------------
-Animated Glow
----------------------------*/
+/* Glow Effects */
 
 .glow-blue {
-  box-shadow:
-    0 0 20px rgba(56, 189, 248, .25),
-    0 0 40px rgba(56, 189, 248, .10);
+  box-shadow: 0 0 20px rgba(56, 189, 248, .25), 0 0 40px rgba(56, 189, 248, .10);
 }
 
 .glow-teal {
-  box-shadow:
-    0 0 20px rgba(20, 184, 166, .25),
-    0 0 40px rgba(20, 184, 166, .10);
+  box-shadow: 0 0 20px rgba(20, 184, 166, .25), 0 0 40px rgba(20, 184, 166, .10);
 }
 
-/* --------------------------
-Hover Animation
----------------------------*/
+/* Hover Animation */
 
 .hover-lift {
   transition: all .35s ease;
@@ -134,9 +111,7 @@ Hover Animation
   transform: translateY(-8px);
 }
 
-/* --------------------------
-Fade Animation
----------------------------*/
+/* Fade Animation */
 
 .fade-up {
   animation: fadeUp .8s ease;
