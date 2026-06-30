@@ -1,17 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import {
-  Link,
-  NavLink,
-  useNavigate,
-} from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,8 +14,9 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    return () =>
+    return () => {
       window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const menuItems = [
@@ -51,20 +46,6 @@ const Navbar = () => {
     },
   ];
 
-  const goToOrderForm = () => {
-    navigate("/shop");
-
-    setTimeout(() => {
-      document
-        .getElementById("order")
-        ?.scrollIntoView({
-          behavior: "smooth",
-        });
-    }, 400);
-
-    setMobileOpen(false);
-  };
-
   return (
     <motion.nav
       initial={{ y: -80 }}
@@ -89,13 +70,11 @@ const Navbar = () => {
             >
               <span className="text-black">Uni</span>
               <span className="text-brand-accent">क</span>
-              <span className="text-brand-teal">
-                {" "}Drippy
-              </span>
+              <span className="text-brand-teal"> Drippy</span>
             </motion.div>
           </Link>
 
-          {/* Desktop Menu */}
+          {/* Desktop Navigation */}
 
           <div className="hidden md:flex items-center space-x-8">
 
@@ -115,22 +94,20 @@ const Navbar = () => {
               </NavLink>
             ))}
 
-            <button
-              onClick={goToOrderForm}
-              className="px-5 py-2 rounded-full bg-brand-accent text-white font-bold hover:bg-brand-teal transition duration-300"
+            <Link
+              to="/order"
+              className="px-6 py-3 rounded-full bg-brand-accent text-white font-bold hover:bg-brand-teal transition duration-300 shadow-lg"
             >
-              Shop Now
-            </button>
+              Order Now
+            </Link>
 
           </div>
 
-          {/* Mobile Menu Icon */}
+          {/* Mobile Menu Button */}
 
           <button
             className="md:hidden text-black"
-            onClick={() =>
-              setMobileOpen(!mobileOpen)
-            }
+            onClick={() => setMobileOpen(!mobileOpen)}
           >
             {mobileOpen ? (
               <FiX size={28} />
@@ -143,7 +120,7 @@ const Navbar = () => {
 
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Navigation */}
 
       {mobileOpen && (
         <motion.div
@@ -157,9 +134,7 @@ const Navbar = () => {
               <NavLink
                 key={item.title}
                 to={item.path}
-                onClick={() =>
-                  setMobileOpen(false)
-                }
+                onClick={() => setMobileOpen(false)}
                 className={({ isActive }) =>
                   `py-4 text-center uppercase tracking-widest ${
                     isActive
@@ -174,12 +149,13 @@ const Navbar = () => {
 
             <div className="px-6 mt-4">
 
-              <button
-                onClick={goToOrderForm}
-                className="w-full py-3 rounded-lg bg-brand-accent text-white font-bold"
+              <Link
+                to="/order"
+                onClick={() => setMobileOpen(false)}
+                className="block text-center py-3 rounded-xl bg-brand-accent text-white font-bold hover:bg-brand-teal transition"
               >
-                Shop Now
-              </button>
+                Order Now
+              </Link>
 
             </div>
 
