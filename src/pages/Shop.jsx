@@ -42,6 +42,21 @@ const products = [
 ];
 
 const Shop = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#order") {
+      setTimeout(() => {
+        document
+          .getElementById("order")
+          ?.scrollIntoView({
+            behavior: "smooth",
+          });
+      }, 200);
+    }
+  }, [location]);
+
   return (
     <div className="pt-32 pb-20 bg-white min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
