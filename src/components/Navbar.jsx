@@ -1,11 +1,17 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Link, NavLink } from "react-router-dom";
+import {
+  Link,
+  NavLink,
+  useNavigate,
+} from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +51,20 @@ const Navbar = () => {
     },
   ];
 
+  const goToOrderForm = () => {
+    navigate("/shop");
+
+    setTimeout(() => {
+      document
+        .getElementById("order")
+        ?.scrollIntoView({
+          behavior: "smooth",
+        });
+    }, 400);
+
+    setMobileOpen(false);
+  };
+
   return (
     <motion.nav
       initial={{ y: -80 }}
@@ -57,9 +77,11 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
+
         <div className="h-20 flex items-center justify-between">
 
           {/* Logo */}
+
           <Link to="/">
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -74,6 +96,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu */}
+
           <div className="hidden md:flex items-center space-x-8">
 
             {menuItems.map((item) => (
@@ -92,16 +115,17 @@ const Navbar = () => {
               </NavLink>
             ))}
 
-            <Link
-              to="/shop"
+            <button
+              onClick={goToOrderForm}
               className="px-5 py-2 rounded-full bg-brand-accent text-white font-bold hover:bg-brand-teal transition duration-300"
             >
               Shop Now
-            </Link>
+            </button>
 
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Icon */}
+
           <button
             className="md:hidden text-black"
             onClick={() =>
@@ -116,9 +140,11 @@ const Navbar = () => {
           </button>
 
         </div>
+
       </div>
 
       {/* Mobile Menu */}
+
       {mobileOpen && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -147,20 +173,20 @@ const Navbar = () => {
             ))}
 
             <div className="px-6 mt-4">
-              <Link
-                to="/shop"
-                onClick={() =>
-                  setMobileOpen(false)
-                }
-                className="block text-center py-3 rounded-lg bg-brand-accent text-white font-bold"
+
+              <button
+                onClick={goToOrderForm}
+                className="w-full py-3 rounded-lg bg-brand-accent text-white font-bold"
               >
                 Shop Now
-              </Link>
+              </button>
+
             </div>
 
           </div>
         </motion.div>
       )}
+
     </motion.nav>
   );
 };
