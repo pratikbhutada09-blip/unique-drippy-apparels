@@ -1,3 +1,4 @@
+import OrderForm from "../components/OrderForm";
 import { motion } from "framer-motion";
 
 const products = [
@@ -106,7 +107,12 @@ const Shop = () => {
           ))}
 
         </div>
+        
+      {/* Order Form */}
 
+        <div className="mt-24">
+          <OrderForm />
+        </div>
       </div>
     </div>
   );
