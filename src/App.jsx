@@ -11,6 +11,7 @@ import Collections from "./pages/Collections";
 import CustomizePage from "./pages/Customize";
 import AboutPage from "./pages/About";
 import ContactPage from "./pages/Contact";
+import Order from "./pages/Order";
 
 function App() {
 return ( <Router> <div className="bg-white text-black min-h-screen overflow-x-hidden">
@@ -46,6 +47,11 @@ return ( <Router> <div className="bg-white text-black min-h-screen overflow-x-hi
           element={<AboutPage />}
         />
 
+        <Route
+          path="/order"
+          element={<Order />}
+        />
+          
         <Route
           path="/contact"
           element={<ContactPage />}
