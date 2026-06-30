@@ -1,6 +1,7 @@
 import OrderForm from "../components/OrderForm";
 import { motion } from "framer-motion";
-
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 const products = [
   {
     name: "Oversized T-Shirt",
